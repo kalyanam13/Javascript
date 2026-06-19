@@ -66,7 +66,24 @@ inp.addEventListener("input" , function(dets){
 });
 */
 
+// change event tab chalta hai jab aapka koi input select ya textarea mei koi change hojaaye
+/*
+let sel = document.querySelector("select");
+let device = document.querySelector("#device");
 
+sel.addEventListener("change", function(dets){
+    device.textContent = `${dets.target.value} Device Selected`;
+})
+*/
+let h1 = document.querySelector("h1");
 
+window.addEventListener("keydown" , function(dets){
+    if(dets.key === " "){
+        h1.textContent = "SPC"
+    }
+    else{
+        h1.textContent = dets.key;
+    }
+});
 
 
